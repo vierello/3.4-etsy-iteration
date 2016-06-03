@@ -72,7 +72,10 @@
     }
 
   });
-  console.log('The items that have more than 8 materials:\n ', numberOfMaterials);
+
+  var typeOfMaterials = numberOfMaterials.forEach(function(materials, index, array){
+    console.log(materials.title + ' has ' + materials.materials.length + ' materials:\n' + materials.materials);
+  });
 
   //question 6: we need to use a filter to return each item that was made by
   //their seller by looking at the made_by item within the object and checking to
